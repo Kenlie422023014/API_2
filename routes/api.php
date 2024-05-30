@@ -2,10 +2,30 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\interiorController;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\InteriorController;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
 
-Route::apiResource('interior',InteriorController::class);
+Route::prefix ('user')->group(function (){
+    Route::get('/users',function(){
+        return $request->user();
+    });
+    Route::post('/register', [AuthController::class,'register']);
+    Route::get('/login', [AuthController::class,'login'])->name('login');
+    Route::post('/login', [AuthController::class,'login']);
+    Route::post('/logout', [AuthController::class,'logout'])->middleware('auth:api');
+});
+
+Route::apiResource('interior',InteriorController::class,[
+    'only'=> [
+        'index',
+        'show'
+    ]
+]);
+
+Route::resource ('interior',InteriorController::class,[
+    'except'=> [
+        'index',
+        'show'
+    ]
+])->middleware(['auth:api']);
