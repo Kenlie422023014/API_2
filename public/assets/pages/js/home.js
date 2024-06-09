@@ -24,7 +24,7 @@ function getData(){
                                     <h6 class="mb-20">
                                         Latest from PandoraInterior
                                     </h6>
-                                    <h1>`+breakWord(item.interior)+`</h1>
+                                    <h1>`+breakWord(item.Name)+`</h1>
 
                                     <div class="button-box section-space--mt_60">
                                         <a href="#" class="text-btn-normal font-weight--reguler font-lg-p">Discover now</a>
@@ -32,7 +32,7 @@ function getData(){
                                 </div>
                                 <div class="inner-images">
                                     <div class="image-one">
-                                        <img src="`+item.cover+`" width="250" class="img-fluid" alt="Image">
+                                        <img src="`+item.image+`" width="250" class="img-fluid" alt="Image">
                                     </div>
                                 </div>
                             </div>

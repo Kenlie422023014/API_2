@@ -28,7 +28,7 @@ function getData(toPage=1){
                                     <div class="single-product-item text-center">
                                         <div class="products-images">
                                             <a href="/interior/`+item.id+`" class="product-thumbnail">
-                                                <img src="`+item.image+`" alt="https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-large-window-OtXADkUh3-I" height="300">
+                                                <img src="`+item.image+`" alt="Product Images" height="300">
                                             </a>
                                             <div class="product-actions">
                                                 <a href="/interior/`+item.id+`"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a>

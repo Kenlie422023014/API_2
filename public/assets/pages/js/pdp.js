@@ -1,7 +1,7 @@
 function getDataByWindowUrlKey(){
     let windowUrl = $(location).attr('href'); 
     let windowUrlKey = windowUrl.replace(/\/\s*$/, "").split('/').pop();
-    let url = baseUrl+'/api/jewel/'+windowUrlKey;
+    let url = baseUrl+'/api/interior/'+windowUrlKey;
     
     axios.get(url,{},apiHeaders)
     .then(function (response) {
@@ -33,7 +33,7 @@ function getDataByWindowUrlKey(){
           $('.product-add-to-cart-is-disabled').show();
         }
         // tag
-        let collectionOfTag = ['Jewel','Kalung','Best Seller','Cincin','Gelang','Accessories','Fashion','Gifts','Style','Beauty','Luxury','Customized'];
+        let collectionOfTag = ['Interior','Kursi','Best Seller','Sofa','Meja','Lukisan','Karpet','Plants','Style','Quality','Luxury','Customized'];
         let selectedTags    = collectionOfTag.sort(() => .5 - Math.random()).slice(0, 4); // only get 4, randomly, from collectionOfTag
         template = '';
         for (let index = 0; index < selectedTags.length; index++) {
