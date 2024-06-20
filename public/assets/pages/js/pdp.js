@@ -10,10 +10,10 @@ function getDataByWindowUrlKey(){
 
       $('.product-img-main-href').attr('href',response.data.image);
       $('.product-img-main-src').attr('src',response.data.image);
-      $('#product-name').html(response.data.name);
+      $('#product-Name').html(response.data.name);
       $('#product-type').html(response.data.type);
-      $('#product-price').html('$ '+parseFloat(response.data.price).toLocaleString());
-      $('#product-description').html(response.data.description);
+      $('#product-Price').html('$ '+parseFloat(response.data.price).toLocaleString());
+      $('#product-Description').html(response.data.description);
 
       // START -- note, unless you have these data in a database structure, here we are hardcoding them for display purposes
         // review
@@ -33,7 +33,7 @@ function getDataByWindowUrlKey(){
           $('.product-add-to-cart-is-disabled').show();
         }
         // tag
-        let collectionOfTag = ['Interior','Kursi','Best Seller','Sofa','Meja','Lukisan','Karpet','Plants','Style','Quality','Luxury','Customized'];
+        let collectionOfTag = ['Interior','Kursi','Best Seller','Sofa','Meja','Lemari','Couch','Bed','Style','Quality','Luxury','Customized'];
         let selectedTags    = collectionOfTag.sort(() => .5 - Math.random()).slice(0, 4); // only get 4, randomly, from collectionOfTag
         template = '';
         for (let index = 0; index < selectedTags.length; index++) {

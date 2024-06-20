@@ -1,14 +1,22 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "My rest Api",
-        "version": "1.0"
+        "title": "My Rest API",
+        "description": "Laravel project to practice developing Rest API with L5 Swagger OpenApi",
+        "contact": {
+            "name": "Kenlie",
+            "email": "kenlie.422023014@civitas.ukrida.ac.id"
+        },
+        "version": "1.0",
+        "x-logo": {
+            "url": "https://miro.medium.com/v2/resize:fit:1200/1*J3G3akaMpUOLegw0p0qthA.png"
+        }
     },
     "paths": {
         "/api/user/register": {
             "post": {
                 "tags": [
-                    "user"
+                    "User"
                 ],
                 "summary": "Register new user & get token",
                 "operationId": "register",
@@ -21,17 +29,17 @@
                                 "$ref": "#/components/schemas/User"
                             },
                             "example": {
-                                "name": "Asep",
-                                "email": "Asep420@gmail.com",
-                                "password": "2341OOP",
-                                "password_confirmation": "2341OOP"
+                                "name": "Mark",
+                                "email": "Mark77@gmail.com",
+                                "password": "2077OOP",
+                                "password_confirmation": "2077OOP"
                             }
                         }
                     }
                 },
                 "responses": {
                     "400": {
-                        "description": "invalid input",
+                        "description": "Invalid input",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -39,7 +47,7 @@
                         }
                     },
                     "201": {
-                        "description": "successful",
+                        "description": "Successful",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -52,9 +60,9 @@
         "/api/user/login": {
             "post": {
                 "tags": [
-                    "user"
+                    "User"
                 ],
-                "summary": "log in to existing user & get token",
+                "summary": "Log in to existing user & get token",
                 "operationId": "login",
                 "requestBody": {
                     "description": "Request body description",
@@ -65,15 +73,15 @@
                                 "$ref": "#/components/schemas/User"
                             },
                             "example": {
-                                "email": "Asep420@gmail.com",
-                                "password": "2341OOP"
+                                "email": "Mark77@gmail.com",
+                                "password": "2077OOP"
                             }
                         }
                     }
                 },
                 "responses": {
                     "400": {
-                        "description": "invalid input",
+                        "description": "Invalid input",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -81,7 +89,7 @@
                         }
                     },
                     "201": {
-                        "description": "successful",
+                        "description": "Successful",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -94,9 +102,9 @@
         "/api/user/logout": {
             "post": {
                 "tags": [
-                    "user"
+                    "User"
                 ],
-                "summary": "log out & destroy self token",
+                "summary": "Log out & destroy self token",
                 "operationId": "logout",
                 "parameters": [
                     {
@@ -111,7 +119,7 @@
                 ],
                 "responses": {
                     "400": {
-                        "description": "invalid input",
+                        "description": "Invalid input",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -119,7 +127,7 @@
                         }
                     },
                     "201": {
-                        "description": "successful",
+                        "description": "Successful",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -138,7 +146,7 @@
         "/api/interior": {
             "get": {
                 "tags": [
-                    "interior"
+                    "Interior"
                 ],
                 "summary": "Display a listing of items",
                 "operationId": "index",
@@ -175,9 +183,9 @@
                         }
                     },
                     {
-                        "name": "_producer",
+                        "name": "_type",
                         "in": "query",
-                        "description": "search by producer name",
+                        "description": "search by type",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -189,7 +197,7 @@
                         "description": "word to search",
                         "required": false,
                         "schema": {
-                            "type": "integer",
+                            "type": "string",
                             "example": "latest"
                         }
                     }
@@ -207,7 +215,7 @@
             },
             "post": {
                 "tags": [
-                    "interior"
+                    "Interior"
                 ],
                 "summary": "Store a newly created item",
                 "operationId": "store",
@@ -222,16 +230,18 @@
                             "example": {
                                 "name": "Sofa modern",
                                 "producer": "HadesInterior",
-                                "distributor": "Ace_Hardware",
+                                "Type": "Sofa",
                                 "Year_produced": "2004",
-                                "image": ""
+                                "Description": "Sofa yang terbuat dari bahan empuk berkualitas",
+                                "Price": "1500000",
+                                "image": "https://i.ibb.co.com/BtRMfCP/Modern-sofa.png"
                             }
                         }
                     }
                 },
                 "responses": {
                     "400": {
-                        "description": "invalid input",
+                        "description": "Invalid input",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -239,7 +249,7 @@
                         }
                     },
                     "201": {
-                        "description": "successful",
+                        "description": "Successful",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -258,7 +268,7 @@
         "/api/interior/{id}": {
             "get": {
                 "tags": [
-                    "interior"
+                    "Interior"
                 ],
                 "summary": "Display the specified item",
                 "operationId": "show",
@@ -270,13 +280,13 @@
                         "required": true,
                         "schema": {
                             "type": "integer",
-                            "format": "int64"
+                            "format": "int65"
                         }
                     }
                 ],
                 "responses": {
                     "404": {
-                        "description": "item not found",
+                        "description": "Item not found",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -284,7 +294,7 @@
                         }
                     },
                     "400": {
-                        "description": "invalid input",
+                        "description": "Invalid input",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -292,7 +302,7 @@
                         }
                     },
                     "200": {
-                        "description": "successful",
+                        "description": "Successful",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -303,7 +313,7 @@
             },
             "put": {
                 "tags": [
-                    "interior"
+                    "Interior"
                 ],
                 "summary": "Update the specified item",
                 "operationId": "update",
@@ -330,16 +340,18 @@
                             "example": {
                                 "name": "Sofa modern",
                                 "producer": "HadesInterior",
-                                "price": "175000",
-                                "description": "Sofa yang sangat empuk dan terlihat modern",
-                                "image": ""
+                                "Type": "Sofa",
+                                "Year_produced": "2004",
+                                "Description": "Sofa yang terbuat dari bahan empuk berkualitas",
+                                "Price": "1500000",
+                                "image": "https://i.ibb.co.com/BtRMfCP/Modern-sofa.png"
                             }
                         }
                     }
                 },
                 "responses": {
                     "404": {
-                        "description": "item not found",
+                        "description": "Item not found",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -347,7 +359,7 @@
                         }
                     },
                     "400": {
-                        "description": "invalid input",
+                        "description": "Invalid input",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -355,7 +367,7 @@
                         }
                     },
                     "200": {
-                        "description": "successful",
+                        "description": "Successful",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -372,7 +384,7 @@
             },
             "delete": {
                 "tags": [
-                    "interior"
+                    "Interior"
                 ],
                 "summary": "Remove the specified item",
                 "operationId": "destroy",
@@ -380,7 +392,7 @@
                     {
                         "name": "id",
                         "in": "path",
-                        "description": "ID of item that needs to be deleted",
+                        "description": "ID of item that needs to be removed",
                         "required": true,
                         "schema": {
                             "type": "integer",
@@ -390,7 +402,7 @@
                 ],
                 "responses": {
                     "404": {
-                        "description": "item not found",
+                        "description": "Item not found",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -398,7 +410,7 @@
                         }
                     },
                     "400": {
-                        "description": "invalid input",
+                        "description": "Invalid input",
                         "content": {
                             "application/json": {
                                 "schema": {}
@@ -406,7 +418,7 @@
                         }
                     },
                     "200": {
-                        "description": "successful",
+                        "description": "Successful",
                         "content": {
                             "application/json": {
                                 "schema": {}

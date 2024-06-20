@@ -6,9 +6,9 @@ function getDataOnEnter(event){
     }
 }
 function getData(toPage=1){
-    let url = baseUrl+'/api/interior';
+    let url = baseUrl+'/api/Interior';
     if(toPage){
-        $('[name="_page"]').val(toPage);
+        $('[Name="_page"]').val(toPage);
     }
     let payload = {
         '_limit': 8,
@@ -27,19 +27,19 @@ function getData(toPage=1){
                 template += `   <div class="col-lg-3 col-md-4 col-sm-6">
                                     <div class="single-product-item text-center">
                                         <div class="products-images">
-                                            <a href="/interior/`+item.id+`" class="product-thumbnail">
+                                            <a href="/interior/`+item.id +`" class="product-thumbnail">
                                                 <img src="`+item.image+`" alt="Product Images" height="300">
                                             </a>
                                             <div class="product-actions">
-                                                <a href="/interior/`+item.id+`"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a>
+                                                <a href="/interior/`+item.id +`"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a>
                                                 <a href="#"><i class="p-icon icon-bag2"></i> <span class="tool-tip">Add to cart</span></a>
                                             </div>
                                         </div>
                                         <div class="product-content">
                                             <h6 class="product-title">
-                                                <a href="/interior/`+item.id+`">`+item.name+`</a>
+                                                <a href="/interior/`+item.id +`">`+item.name+`</a>
                                             </h6>
-                                            <small class="text-color-primary">`+item.type+`</small>
+                                            <small class="text-color-primary">`+item.type +`</small>
                                             <div class="product-price">
                                                 <span class="new-price">$ `+parseFloat(item.price).toLocaleString()+`</span>
                                             </div>
@@ -102,7 +102,7 @@ function getData(toPage=1){
                 </li>`; 
             }
             $(id_el_list+'-pagination').html(template);
-            $('[name="_page"]').val(response.data.filter._page);
+            $('[Name="_page"]').val(response.data.filter._page);
         // END---- pagination
 
     })

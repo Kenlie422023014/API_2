@@ -32,7 +32,7 @@ function getData(){
                                 </div>
                                 <div class="inner-images">
                                     <div class="image-one">
-                                        <img src="`+item.image+`" width="250" class="img-fluid" alt="Image">
+                                        <img src="`+item.Image+`" width="250" class="img-fluid" alt="Image">
                                     </div>
                                 </div>
                             </div>

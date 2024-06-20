@@ -11,14 +11,14 @@
                     <div class="shop-widget widget-shop-publishers mt-3">
                         <div class="product-filter">
                             <h6 class="mb-20">Interior type</h6>
-                            <select class="_filter form-select form-select-sm" name="_producer" onchange="getData()">
+                            <select class="_filter form-select form-select-sm" name="_type" onchange="getData()">
                                 <option value="" selected>All</option>
-                                <option value="HadesInterior">HadesInterior</option>
-                                <option value="OdinsonFurniture">OdinsonFurniture</option>
-                                <option value="RimTerrior">RimTerrior</option>
-                                <option value="JoeSwanson.Co">JoeSwanson</option>
-                                <option value="DozerInt">DozerInt</option>
-                                <option value="Phoenix">PhoenixSofa</option>
+                                <option value="Kursi">Kursi</option>
+                                <option value="Meja">Meja</option>
+                                <option value="Lemari">Lemari</option>
+                                <option value="Kasur">Kasur</option>
+                                <option value="Sofa">Sofa</option>
+                                <option value="Karpet">Karpet</option>
                             </select>
                         </div>
                     </div>
@@ -76,12 +76,12 @@
                                 </div>
                                 <div class="shop-toolbar__item ">
                                     <select class="_filter form-select form-select-sm" name="_sort_by" onchange="getData()">
-                                        <option value="name_asc">Sort by A-Z</option>
-                                        <option value="name_desc">Sort by Z-A</option>
-                                        <option value="latest_added">Sort by time added</option>
-                                        <option value="latest_production">Sort by latest production year</option>
-                                        <option value="price_asc">Sort by price: low to high</option>
-                                        <option value="price_desc">Sort by price: high to low</option>
+                                        <option value="Name_asc">Sort by A-Z</option>
+                                        <option value="Name_desc">Sort by Z-A</option>
+                                        <option value="Latest_added">Sort by time added</option>
+                                        <option value="Latest_Production">Sort by latest production year</option>
+                                        <option value="Price_asc">Sort by price: low to high</option>
+                                        <option value="Price_desc">Sort by price: high to low</option>
                                     </select>
                                 </div>
                             </div>

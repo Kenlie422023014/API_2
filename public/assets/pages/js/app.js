@@ -2,7 +2,7 @@ console.log('___app js');
 
 const baseUrl = window.location.origin;
 const apiHeaders = {
-    header : {
+    headers : {
         "Accept": "*/*",
         "Access-Control-Allow-Origin": "*",
         // "content-Type": "application/json",
@@ -35,23 +35,23 @@ function getCookie (name) {
 }
 
 $("#logout-btn").on('click', function (e) {
-    apiHeader['headers']['Authorization'] = 'Bearer'+getCookie('ut');
+    apiHeaders['headers']['Authorization'] = 'Bearer'+getCookie('ut');
     let url = baseUrl+'/api/user/logout';
 
     axios.post(url,{}, apiHeaders)
-    .then(function(response) {
-        console.log('[DATA] response..',response.data);
-        document.cookie = 'ue=';
-        document.cookie = 'ut=';
-        Swal.fire({
-            position: "top-end",
-            icon: "info",
-            title: "logout successfully..",
-            showConfirmButton: false,
-            timer: 1500
-        });
-    setTimeout(function(){
-        window.location=baseUrl
+            .then(function(response) {
+            console.log('[DATA] response..',response.data);
+            document.cookie = 'ue=';
+            document.cookie = 'ut=';
+            Swal.fire({
+                position: "top-end",
+                icon: "info",
+                title: "logout successfully..",
+                showConfirmButton: false,
+                timer: 1500
+                });
+    setTimeout (function () {
+        window.location = baseUrl
     },1500)
     })
     .catch(function(error){

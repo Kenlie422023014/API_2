@@ -10,6 +10,10 @@ use Laravel\Passport\HasApiTokens;
 use OpenApi\Annotations as OA;
 
 /**
+ * Class User.
+ * 
+ * @author Kenlie <kenlie.422023014@civitas.ukrida.ac.id>
+ * 
  * @OA\Schema(
  *      description="User model",
  *      title="User model",

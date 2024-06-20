@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\User;
-
+use OpenApi\Annotations as OA;
 /**
  * class Interior.  
  * 
@@ -25,12 +25,15 @@ class Interior extends Model
 {
     // use HasFactory;
     use SoftDeletes;
-    protected $table = 'interior';
+    protected $table = 'interiors';
     protected $fillable = [
-        'Name',
-        'Producer',
-        'Distributor',
-        'Year_produced',
+        'name',
+        'producer',
+        'type',
+        'year_produced',
+        'image',
+        'description',
+        'price',
         'created_at',
         'created_by',
         'updated_at',

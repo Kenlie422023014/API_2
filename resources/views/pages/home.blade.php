@@ -19,6 +19,7 @@
             <div class="container">
                 <div class="row">
                     <div class="about-us-content_6 text-center">
+                    <div class="col-lg-12">
                         <h2>Pandora Interior.&nbsp;&nbsp;Store</h2>
                         <p>
                             <small>
@@ -83,10 +84,60 @@
             </div>
         </div>
         <!--our member area End -->
+
+ <!-- Our Brand Area Start -->
+ <div class="our-brand-area section-space--pb_90">
+            <div class="container">_
+                <div class="brand-slider-active">
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="assets/images/brand/partnerb1.jpg" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="assets/images/brand/partnerb2.jpg" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="assets/images/brand/partnerb3.jpg" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="assets/images/brand/partnerb4.jpg" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="assets/images/brand/partnerb5.jpg" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="assets/images/brand/partnerb6.jpg" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="assets/images/brand/partnerb7.jpg" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single-brand-item">
+                            <a href="#"><img src="assets/images/brand/partnerb8.jpg" class="img-fluid" alt="Brand Images"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Brand Area End -->
+
 </div>
 @endsection
 @section('addition_css')
 @endsection
 @section('addition_script')
-    <script src="{{asset('pages\js/home.js')}}"></script>
+    <script src="{{asset('pages/js/home.js')}}"></script>
 @endsection
